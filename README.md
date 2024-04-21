@@ -3,7 +3,7 @@
 
 
 
-(¯▿¯)	simple webdriver/selenium based newsletter spammer .
+(¯▿¯)	simple webdriver/selenium based newsletter mailbox spammer concept thingy
 
  -- NOT YET COMPLETED -- 
 
