@@ -13,3 +13,11 @@
 
 
  Issues with any features? Website no longer working? Issues with Captcha? Need to send a death threat? For the fastest response, email me at mack.lamoureux@protonmail.com
+
+
+
+
+<(_ _)> to ... do ..
+
+ 1. gui
+ 2. more... newsletters....
