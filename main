@@ -1,0 +1,46 @@
+## total mailbox death - ,  .  :3
+
+## not finished
+
+#           >>>>> >>>>><<<<< <<<<<
+
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+
+import time
+
+#          >>>>> >>>>><<<<< <<<<<
+
+
+driver = webdriver.Chrome()
+options = webdriver.ChromeOptions() 
+options.add_argument("start-maximized")
+options.add_argument('disable-infobars')
+target = "pasteemail@example.me"  ## replacc.e th uh email :3
+
+driver.get("http://www.google.com")
+pickle.dump(driver.get_cookies(), open("cookies.pkl", "wb"))
+
+
+def tmd_shnooie():
+    user_input = driver.find_element(By.NAME, "contact[email]")
+    user_input.send_keys(target)
+    webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
+    time.sleep(100000)
+    
+
+driver.get("https://www.cottagegardenthreads.com.au/pages/join-our-newsletter")
+print(" 1/783 ")
+tmd_shnooie()
+
+driver.get("https://jadedldn.com/en-au")
+print(" 2/783 ")
+tmd_shnooie()
+
