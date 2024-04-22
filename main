@@ -1,7 +1,5 @@
 ## total mailbox death - ,  .  :3
 
-## not automatic yet :<
-
 #           >>>>> >>>>><<<<< <<<<<
 
 from selenium import webdriver
@@ -56,20 +54,15 @@ def tmd_Shnooie_firstName(sn_firstName):
         driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_firstName)
         sn_Email_element.send_keys(shnoofirstname)
-        if sn_Email_element.is_displayed():
-            time.sleep(1)
-            print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_firstName)
     except:
             pass
     finally:
         time.sleep(1)
-        webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-        WebDriverWait(driver,2)
 
 
  # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
 
-emaillist = ["fields[email]", "email", "EMAIL", "contact[email]", "et_pb_signup_email"]
+emaillist = ["fields[email]", "email", "EMAIL", "contact[email]", "et_pb_signup_email", "email_address", "Email"]
 
 def tmd_Snorrey_email():
     for i in emaillist:
@@ -128,4 +121,21 @@ tmd_Snorrey_email()
 driver.get("https://pornstar.love/newsletter/")
 print("7/783")
 tmd_con()
+tmd_Snorrey_email()
+
+driver.get("https://everydaydishes.com/tag/newsletter/")
+print("8/783")
+tmd_con
+tmd_Snorrey_email()
+
+driver.get("https://www.udderdelights.com.au/recipes/")
+print("9/783")
+tmd_con
+tmd_Snorrey_firstName()
+tmd_Snorrey_email()
+
+driver.get("https://www.sortedfood.com/")
+print("10/783")
+tmd_con
+tmd_Snorrey_firstName()
 tmd_Snorrey_email()
