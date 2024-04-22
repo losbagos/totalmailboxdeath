@@ -12,6 +12,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 import keyboard
 import time
+import numpy
+from numpy import loadtxt
 
 #          >>>>> >>>>><<<<< <<<<<
 
@@ -86,56 +88,18 @@ def tmd_Snorrey_surName():
         tmd_Shnooie_surName(i)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
+my_file = open("list.txt", "r") 
+data = my_file.read() 
+websitesList = data.split("\n")
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
+def tmd_Website(website):
+    driver.get(website)
+    tmd_Snorrey_email()
+    tmd_Snorrey_firstName()
+    time.sleep(3)
 
-driver.get("https://jubina.com/blog")
-print(" 1/783 ")
-tmd_con()
-tmd_Snorrey_email()
+def tmd_Snorrey_web():
+    for i in websitesList:
+        tmd_Website(i)
 
-driver.get("https://goldcardvegan.com/newsletter/")
-print(" 2/783 ")
-tmd_con()
-tmd_Snorrey_email()
-tmd_Snorrey_firstName()
-
-driver.get("https://vegnews.com/signup")
-print("3/783")
-tmd_con()
-tmd_Snorrey_email()
-
-driver.get("https://nobones.co/")
-print("4/783")
-tmd_con()
-tmd_Snorrey_email()
-
-driver.get("https://pendolino.com.au/subscribe")
-print("5/783")
-tmd_con()
-tmd_Snorrey_email()
-
-driver.get("https://cutecakedesign.com/pages/newsletter")
-print("6/783")
-tmd_con()
-tmd_Snorrey_email()
-
-driver.get("https://pornstar.love/newsletter/")
-print("7/783")
-tmd_con()
-tmd_Snorrey_email()
-
-driver.get("https://everydaydishes.com/tag/newsletter/")
-print("8/783")
-tmd_con
-tmd_Snorrey_email()
-
-driver.get("https://www.udderdelights.com.au/recipes/")
-print("9/783")
-tmd_con
-tmd_Snorrey_firstName()
-tmd_Snorrey_email()
-
-driver.get("https://www.sortedfood.com/")
-print("10/783")
-tmd_con
-tmd_Snorrey_firstName()
-tmd_Snorrey_email()
+tmd_Snorrey_web()
