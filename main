@@ -57,8 +57,6 @@ def tmd_Shnooie_firstName(sn_firstName):
         sn_Email_element.send_keys(shnoofirstname)
         if sn_Email_element.is_displayed():
             print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_firstName)
-    except:
-        print("₊˚⛌  no name element was found for ➷ ", sn_firstName)
     finally:
         time.sleep(1)
         webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
@@ -66,33 +64,28 @@ def tmd_Shnooie_firstName(sn_firstName):
 
 
  # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
-        
-emailList = ["email_address", "EMAIL", "emailid", "email"]
-    
+
+emaillist = ["shnnnoooo", "email", "EMAIL", "contact[email]"]
+
 def tmd_Snorrey_email():
-    
+    for i in emaillist:1
+        tmd_Shnooie_email(i)
+        time.sleep(2)
     
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-def tmd_Snorrey_firstName():
-  while True:
-    time.sleep(2)
-    tmd_Shnooie_firstName("fields[first_name]")
-    time.sleep(2)
-    tmd_Shnooie_firstName("first_name")
-    time.sleep(2)
-    tmd_Shnooie_firstName("FNAME")
-    time.sleep(2)
-    tmd_Shnooie_firstName("firstname")
-    time.sleep(2)
-if keyboard.is_pressed('enter'):
-    break
+firstNamelist = ["fname", "name", "first_name", "firstname"]
 
+def tmd_Snorrey_email():
+    for i in firstNamelist:1
+        tmd_Shnooie_firstName(i)
+        time.sleep(2)
 
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
 driver.get("https://jubina.com/blog")
-print(" 2/783 ")
+print(" 1/783 ")
 tmd_con()
 tmd_Snorrey_email()
 
