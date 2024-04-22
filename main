@@ -11,105 +11,90 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
-
+from selenium.webdriver.support.ui import WebDriverWait
+import keyboard
 import time
 
 #          >>>>> >>>>><<<<< <<<<<
 
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ definitions ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
 driver = webdriver.Chrome()
-email = "pasteemail@example.me"  ## replacc.e th uh email :3
-first_name = "Example John" ## replace this with anything, doesn't matter
-last_name = "Example Smith" ## replace this with anything, doesn't matter
+get_url = driver.current_url
+wait = WebDriverWait(driver,5)
+shnooemail = "pasteemail@example.me"  ## replacc.e th uh target  email :3
+shnoofirstname = "Example John" ## replace this witdh anything, doesn't matter !
+shnoolastname = "Example Smith" ## replace this witdh anything, doesn't matter !
 
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
-def tmd_shnooie_method2():
-    user_email = driver.find_element(By.NAME, "email")
-    time.sleep(2)
-    user_email.send_keys(email)
-    webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-    time.sleep(5)
+def tmd_con():
+    WebDriverWait(driver,3)
+    print("The current url is:"+str(get_url))
 
-def tmd_shnooie_method3():
-    time.sleep(2)
-
-# -- ˋ°•*⁀➷ email name elements variants °♡
-# --
-    try:
-        driver.find_element(By.NAME, "email").send_keys(email)
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
+## ˋ°•*⁀➷ shnooie for all email element variants
+def tmd_Shnooie_email(sn_Email):
+    try: 
+        driver.implicitly_wait(4)
+        sn_Email_element = driver.find_element(By.NAME, sn_Email)
+        sn_Email_element.send_keys(shnooemail)
+        if sn_Email.is_displayed():
+            print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_Email)
     except:
-        print("・:〃♡ no name element ꒰ email ꒱ found, searching...") ## element name ꒰ email ꒱
-    try:
-        driver.find_element(By.NAME, "EMAIL").send_keys(email) ## element name ꒰ EMAIL ꒱
+        print("₊˚⛌  no name element was found for ➷ ", sn_Email)
+    finally:
+        time.sleep(1)
+        webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
+        WebDriverWait(driver,2)
+
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
+## ˋ°•*⁀➷ shnooie for all first name element variants
+def tmd_Shnooie_firstName(sn_firstName):
+    try: 
+        driver.implicitly_wait(4)
+        sn_Email_element = driver.find_element(By.NAME, sn_firstName)
+        sn_Email_element.send_keys(shnoofirstname)
+        if sn_Email_element.is_displayed():
+            print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_firstName)
     except:
-        print("・:〃♡ no name element ꒰ EMAIL ꒱ found, searching...")
-    try:
-        driver.find_element(By.NAME, "email_address").send_keys(email) ## element name ꒰ email_address ꒱
-    except:
-        print("・:〃♡ no name element ꒰ email_address ꒱ found, searching...")
+        print("₊˚⛌  no name element was found for ➷ ", sn_firstName)
+    finally:
+        time.sleep(1)
+        webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
+        WebDriverWait(driver,2)
+
+
+ # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
+        
+emailList = ["email_address", "EMAIL", "emailid", "email"]
     
-# -- ˋ°•*⁀➷ firstname name element variants °♡ 
-# -- 
-    try:
-        driver.find_element(by.NAME, "fields[first_name]").send_keys(first_name) ## element name ꒰ "fields[first_name] ꒱
-    except:
-        print("・:〃♡ no name element ꒰ fields[first_name] ꒱ found, searching...")
-    try:
-        driver.find_element(by.ID, "mc-FNAME").send_keys(first_name) ## element name ꒰ mc-FNAME ꒱
-    except:
-        print("・:〃♡ no ID element ꒰ mc-FNAME ꒱ found, searching...")
+def tmd_Snorrey_email():
+    
+    
 
-# -- ˋ°•*⁀➷ lastname name element variants °♡
-# -- 
-    try:
-        driver.find_element(by.ID, "mc-LNAME").send_keys(first_name) ## element ID ꒰ mc-LNAME ꒱
-    except:
-        print("・:〃♡ no ID element ꒰ mc-LNAME ꒱ found, searching...")
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-    # -- ♡ done searching ♡
-    time.sleep(3)
-    webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-    time.sleep(6)
+def tmd_Snorrey_firstName():
+  while True:
+    time.sleep(2)
+    tmd_Shnooie_firstName("fields[first_name]")
+    time.sleep(2)
+    tmd_Shnooie_firstName("first_name")
+    time.sleep(2)
+    tmd_Shnooie_firstName("FNAME")
+    time.sleep(2)
+    tmd_Shnooie_firstName("firstname")
+    time.sleep(2)
+if keyboard.is_pressed('enter'):
+    break
 
 
-driver.get("https://oldweb.feelinghealthy.com.au/")
-print(" 1/783 ")
-user_email = driver.find_element(By.NAME, "input_1")
-time.sleep(2)
-user_email.send_keys(email)
-time.sleep(2)
-user_firstname = driver.find_element(By.XPATH, '//*[@id="input_6_3"]')
-user_firstname.send_keys(first_name)
-webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-time.sleep(5) # 
 
 driver.get("https://jubina.com/blog")
 print(" 2/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://bucketlist2life.com/newsletter")
-print(" 3/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://www.safercare.vic.gov.au/subscribe")
-print(" 4/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://mailchi.mp/44b80fe41a60/caitlinhartskinandlash")
-print(" 5/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://lawyerswellness.com/newsletter/")
-print(" 6/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://squadlife.com.au/blog/")
-print(" 7/783 ")
-tmd_shnooie_method3()
-
-driver.get("https://prismfacelab.com/blog")
-print(" 8/783 ")
-tmd_shnooie_method3()
+tmd_con()
+tmd_Snorrey_email()
 
 
 
