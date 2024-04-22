@@ -36,13 +36,14 @@ def tmd_con():
 ## ˋ°•*⁀➷ shnooie for all email element variants
 def tmd_Shnooie_email(sn_Email):
     try: 
-        driver.implicitly_wait(4)
+        driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_Email)
         sn_Email_element.send_keys(shnooemail)
         if sn_Email.is_displayed():
+            time.sleep(1)
             print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_Email)
     except:
-        print("₊˚⛌  no name element was found for ➷ ", sn_Email)
+            pass
     finally:
         time.sleep(1)
         webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
@@ -52,11 +53,14 @@ def tmd_Shnooie_email(sn_Email):
 ## ˋ°•*⁀➷ shnooie for all first name element variants
 def tmd_Shnooie_firstName(sn_firstName):
     try: 
-        driver.implicitly_wait(4)
+        driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_firstName)
         sn_Email_element.send_keys(shnoofirstname)
         if sn_Email_element.is_displayed():
+            time.sleep(1)
             print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_firstName)
+    except:
+            pass
     finally:
         time.sleep(1)
         webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
@@ -65,22 +69,28 @@ def tmd_Shnooie_firstName(sn_firstName):
 
  # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
 
-emaillist = ["shnnnoooo", "email", "EMAIL", "contact[email]"]
+emaillist = ["fields[email]", "email", "EMAIL", "contact[email]", "et_pb_signup_email"]
 
 def tmd_Snorrey_email():
-    for i in emaillist:1
+    for i in emaillist:
         tmd_Shnooie_email(i)
-        time.sleep(2)
     
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-firstNamelist = ["fname", "name", "first_name", "firstname"]
+firstNamelist = ["fname", "name", "first_name", "firstname", "et_pb_signup_firstname"]
 
-def tmd_Snorrey_email():
-    for i in firstNamelist:1
+def tmd_Snorrey_firstName():
+    for i in firstNamelist:
         tmd_Shnooie_firstName(i)
-        time.sleep(2)
+
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
+
+surNamelist = ["lname", "lastname", "last_name"]
+
+def tmd_Snorrey_surName():
+    for i in surNamelist:
+        tmd_Shnooie_surName(i)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
@@ -89,5 +99,33 @@ print(" 1/783 ")
 tmd_con()
 tmd_Snorrey_email()
 
+driver.get("https://goldcardvegan.com/newsletter/")
+print(" 2/783 ")
+tmd_con()
+tmd_Snorrey_email()
+tmd_Snorrey_firstName()
 
+driver.get("https://vegnews.com/signup")
+print("3/783")
+tmd_con()
+tmd_Snorrey_email()
 
+driver.get("https://nobones.co/")
+print("4/783")
+tmd_con()
+tmd_Snorrey_email()
+
+driver.get("https://pendolino.com.au/subscribe")
+print("5/783")
+tmd_con()
+tmd_Snorrey_email()
+
+driver.get("https://cutecakedesign.com/pages/newsletter")
+print("6/783")
+tmd_con()
+tmd_Snorrey_email()
+
+driver.get("https://pornstar.love/newsletter/")
+print("7/783")
+tmd_con()
+tmd_Snorrey_email()
