@@ -7,7 +7,9 @@
 
  -- NOT YET COMPLETED -- 
 
- Boasting 783 potential newsletters.
+ Boasting 22/783 potential newsletters.
+
+ avergae current time: 12.1 minutes
 
  Note: This is a personal project, any use to maliciously stalk or spam an individual may be considered harrasment and therefore illegal. This is not a harassement tool. 
 
