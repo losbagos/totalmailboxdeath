@@ -1,19 +1,14 @@
 ## total mailbox death - ,  .  :3
 
+## not automatic yet :<
+
 #           >>>>> >>>>><<<<< <<<<<
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver import ActionChains
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
-import keyboard
 import time
-import numpy
-from numpy import loadtxt
 
 #          >>>>> >>>>><<<<< <<<<<
 
@@ -22,9 +17,18 @@ from numpy import loadtxt
 driver = webdriver.Chrome()
 get_url = driver.current_url
 wait = WebDriverWait(driver,5)
-shnooemail = "pasteemail@example.me"  ## replacc.e th uh target  email :3
+
+shnooemail = "mack.lamoureux@vice.com"  ## replacc.e th uh target  email :3
 shnoofirstname = "Example John" ## replace this witdh anything, doesn't matter !
 shnoolastname = "Example Smith" ## replace this witdh anything, doesn't matter !
+
+prefs = {
+  "download.default_directory": "./",
+  "credentials_enable_service": False,
+  "profile.password_manager_enabled": False,
+  "excludeSwitches": ["disable-popup-blocking"]
+}
+options.add_experimental_option("prefs", prefs)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
@@ -32,24 +36,15 @@ def tmd_con():
     WebDriverWait(driver,3)
     print("The current url is:"+str(get_url))
 
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 ## ˋ°•*⁀➷ shnooie for all email element variants
 def tmd_Shnooie_email(sn_Email):
     try: 
         driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_Email)
         sn_Email_element.send_keys(shnooemail)
-        if sn_Email.is_displayed():
-            time.sleep(1)
-            print("₊˚𓆩♡𓆪 ʚɞ sucessfully found name element ➷ ", sn_Email)
     except:
             pass
-    finally:
-        time.sleep(1)
-        webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-        WebDriverWait(driver,2)
 
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 ## ˋ°•*⁀➷ shnooie for all first name element variants
 def tmd_Shnooie_firstName(sn_firstName):
     try: 
@@ -61,10 +56,7 @@ def tmd_Shnooie_firstName(sn_firstName):
     finally:
         time.sleep(1)
 
-
- # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
-
-emaillist = ["fields[email]", "email", "EMAIL", "contact[email]", "et_pb_signup_email", "email_address", "Email"]
+emaillist = ["email", "EMAIL"]
 
 def tmd_Snorrey_email():
     for i in emaillist:
@@ -73,7 +65,7 @@ def tmd_Snorrey_email():
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-firstNamelist = ["fname", "name", "first_name", "firstname", "et_pb_signup_firstname"]
+firstNamelist = ["name", "first_name", "FNAME"]
 
 def tmd_Snorrey_firstName():
     for i in firstNamelist:
@@ -101,5 +93,8 @@ def tmd_Website(website):
 def tmd_Snorrey_web():
     for i in websitesList:
         tmd_Website(i)
+        webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
 
 tmd_Snorrey_web()
+
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
