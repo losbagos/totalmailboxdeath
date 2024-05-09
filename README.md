@@ -11,8 +11,8 @@ unzip + run main.py through an IDE
 
 # on proxies
 
-i didnt implement a proxy, although for most selenium applications id highly recommend a proxy
-free proxies are unsafe. i recommend using a paid rotating proxy or using a tor alternative. 
+i didnt implement a proxy, although for most selenium applications id highly recommend a proxy.
+free proxies are always unsafe. i recommend using a paid rotating proxy or using a tor alternative. 
 
 # note
 
