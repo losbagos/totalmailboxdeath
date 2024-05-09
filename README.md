@@ -4,6 +4,10 @@ selenium / webdriver script that utilizes newsletters for spamming. uses tkinter
 
 for personal learning uses only, i don't endorse malicious use. 
 
-requirements 
+# requirements 
 
 webdriver, ttk 
+
+# how to use
+
+clone script + run main.py through an IDE
