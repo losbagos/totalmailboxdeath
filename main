@@ -1,26 +1,31 @@
 ## total mailbox death - ,  .  :3
 
-## not automatic yet :<
-
 #           >>>>> >>>>><<<<< <<<<<
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 import time
+import tkinter
+import tkinter as tk
+from tkinter import ttk
+import sys
+from math import trunc
+
+from settings import *
+
 
 #          >>>>> >>>>><<<<< <<<<<
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ definitions ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
-
+ 
+options = Options()
 driver = webdriver.Chrome()
-get_url = driver.current_url
 wait = WebDriverWait(driver,5)
 
-shnooemail = "mack.lamoureux@vice.com"  ## replacc.e th uh target  email :3
-shnoofirstname = "Example John" ## replace this witdh anything, doesn't matter !
-shnoolastname = "Example Smith" ## replace this witdh anything, doesn't matter !
+
 
 prefs = {
   "download.default_directory": "./",
@@ -28,73 +33,143 @@ prefs = {
   "profile.password_manager_enabled": False,
   "excludeSwitches": ["disable-popup-blocking"]
 }
-options.add_experimental_option("prefs", prefs)
 
+options.add_experimental_option("prefs", prefs)
+options.page_load_strategy = 'none'
+
+
+tmdApp = tk.Tk()
+tmdApp.title('total mailbox death')
+tmdApp.geometry('280x200')
+tmdApp.configure(background=LightPink, highlightbackground=Pink)
+tmdApp.iconbitmap("kitty.ico")
+
+def tmdGoob():
+    global shnooEmail
+    global shnooFirstname
+    shnooEmail= tmdEmail_entry.get() 
+    shnooFirstname= tmdName_entry.get()
+    tmdWeb()
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
-def tmd_con():
-    WebDriverWait(driver,3)
-    print("The current url is:"+str(get_url))
 
 ## ˋ°•*⁀➷ shnooie for all email element variants
-def tmd_Shnooie_email(sn_Email):
+def tmdShnooie_email(sn_Email):
     try: 
         driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_Email)
-        sn_Email_element.send_keys(shnooemail)
+        sn_Email_element.send_keys(shnooEmail)
     except:
-            pass
+            pass # will pass any lieek umm ones it can't find
 
 ## ˋ°•*⁀➷ shnooie for all first name element variants
-def tmd_Shnooie_firstName(sn_firstName):
+def tmdShnooie_firstName(sn_firstName):
     try: 
         driver.implicitly_wait(1)
         sn_Email_element = driver.find_element(By.NAME, sn_firstName)
-        sn_Email_element.send_keys(shnoofirstname)
+        sn_Email_element.send_keys(shnooFirstname)
     except:
             pass
     finally:
         time.sleep(1)
 
-emaillist = ["email", "EMAIL"]
+emaillist = ["email", "EMAIL", "contact[email]"]
 
-def tmd_Snorrey_email():
+def tmdSnorrey_email():
     for i in emaillist:
-        tmd_Shnooie_email(i)
+        tmdShnooie_email(i)
     
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-firstNamelist = ["name", "first_name", "FNAME"]
+firstNamelist = ["name", "NAME", "first_name", "FNAME"]
 
-def tmd_Snorrey_firstName():
+def tmdSnorrey_firstName():
     for i in firstNamelist:
-        tmd_Shnooie_firstName(i)
+        tmdShnooie_firstName(i)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
 surNamelist = ["lname", "lastname", "last_name"]
 
-def tmd_Snorrey_surName():
+def tmdSnorrey_surName():
     for i in surNamelist:
-        tmd_Shnooie_surName(i)
+        tmdShnooie_surName(i)
 
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
-my_file = open("list.txt", "r") 
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ turning list.txt into a list ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
+
+my_file = open("list.txt", "r")  # list of all da urls n shiet
 data = my_file.read() 
-websitesList = data.split("\n")
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
-def tmd_Website(website):
+websitesList = data.split("\n")   
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ opening da website ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
+
+def tmdWebsite(website):
     driver.get(website)
-    tmd_Snorrey_email()
-    tmd_Snorrey_firstName()
-    time.sleep(3)
+    print(" ⚘᠂ ⚘ The current url is: " + website)
+    tmdSnorrey_email()
+    tmdSnorrey_firstName()
+    time.sleep(1)
 
-def tmd_Snorrey_web():
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
+
+step = trunc(100/len(websitesList))
+
+def tmdWeb():
     for i in websitesList:
-        tmd_Website(i)
+        tmdWebsite(i)
         webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
+        time.sleep(2)
+        progress.step(step)
+        progress.update()
+        
 
-tmd_Snorrey_web()
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -App- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --    
+tmdEmail_label = tkinter.Label(tmdApp, text="Email Address", background=LightPink)
+tmdName_label = tkinter.Label(tmdApp, text="Name", background=LightPink )
+
+tmdEmail_entry = tkinter.Entry(tmdApp)
+tmdName_entry = tkinter.Entry(tmdApp)
+
+tmdSubmit_label = tkinter.Label(tmdApp, text="Total Mailbox Death!", background=LightPink)
+tmdSubmit_button = tkinter.Button (tmdApp, text="Run", background=Pink, command = tmdGoob)
+
+# TO DO, FIGURE OUT !!!!
+
+def tmdExit():
+    driver.close()
+    sys.exit("bai bai")
+
+
+    
+
+tmdExit_button = tkinter.Button(tmdApp, text="Quit Script :3", background=Pink, command=tmdExit)
+
+
+
+                             
+
+
+
+
+tmdSubmit_label.grid(row=0, column=0, columnspan=2)
+
+tmdName_label.grid(row=1, column=0)
+tmdName_entry.grid(row=1, column=1)
+
+tmdEmail_label.grid(row=2, column=0)
+tmdEmail_entry.grid(row=2, column=1)
+
+tmdSubmit_button.grid(row=3, column=0, columnspan=2, pady=3)
+
+tmdExit_button.grid(row=4, column=0, columnspan=2, pady=2)
+
+#--
+progress_label = tkinter.Label(tmdApp, text="Progress Bar!", background=LightPink)
+progress_label.grid(row=7, column=0)
+progress = ttk.Progressbar(tmdApp, length=100)
+progress.grid(row=7, column=1, columnspan=4, pady=3)
+
+
+
+tmdApp.mainloop()
