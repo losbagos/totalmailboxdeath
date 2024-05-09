@@ -4,9 +4,9 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 
 # requirements 
 
-selenium, chromedriver, ttk
+selenium, ttk
 
-https://chromedriver.chromium.org/getting-started
+i use chromedriver: https://chromedriver.chromium.org/getting-started
 
 # how to use
 
