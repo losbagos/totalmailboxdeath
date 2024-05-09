@@ -10,4 +10,4 @@ webdriver, ttk
 
 # how to use
 
-clone script + run main.py through an IDE
+unzip + run main.py through an IDE
