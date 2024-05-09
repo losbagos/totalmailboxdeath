@@ -4,15 +4,18 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 
 # requirements 
 
-selenium, ttk
+* selenium, ttk
+* webdriver
 
-i use chromedriver: https://chromedriver.chromium.org/getting-started
-unzip + run main.py through an IDE
+# use
+
+* ensure webdriver is up to date
+* unzip + run main.py through an IDE
 
 # on proxies
 
-i didnt implement a proxy, although for most selenium applications id highly recommend a proxy.
-free proxies are always unsafe. i recommend using a paid rotating proxy or using a tor alternative. 
+i didnt implement a proxy here, although for most selenium applications id highly recommend a proxy to avoid captchas and a bad fingerprint. 
+> free proxies are always unsafe. i recommend using a paid rotating proxy or using a tor alternative. 
 
 # note
 
