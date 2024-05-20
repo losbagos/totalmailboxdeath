@@ -12,6 +12,10 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 * ensure webdriver is up to date
 * unzip + run main.py through an IDE
 
+# on adding new websites
+
+tba
+
 # on proxies
 
 i didnt implement a proxy here, although for most selenium applications id highly recommend a proxy to avoid captchas and a bad fingerprint. 
