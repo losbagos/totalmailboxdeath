@@ -19,7 +19,7 @@ tba
 # on proxies
 
 i didnt implement a proxy here, although for most selenium applications id highly recommend a proxy to avoid captchas and a bad fingerprint. 
-> free proxies are always unsafe. i recommend using a paid rotating proxy or using a tor alternative. 
+> free proxies are always unsafe. i recommend using a paid rotating proxy or using a free tor alternative. 
 
 # note
 
