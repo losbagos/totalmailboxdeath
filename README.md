@@ -5,7 +5,7 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 # requirements 
 
 * selenium, ttk
-* webdriver
+* webdriver, i use chrome webdriver: https://developer.chrome.com/docs/chromedriver/downloads
 
 # use
 
