@@ -14,7 +14,7 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 
 # on adding new websites
 
-tba
+you are welcome to add websites to list.txt! please see discussions on the criteria they have to meet. 
 
 # on proxies
 
