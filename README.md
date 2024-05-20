@@ -2,6 +2,8 @@
 
 a very simple selenium / webdriver based concept that utilizes newsletters for spamming. uses tkinter for a simple ui. 
 
+![image](https://github.com/losbagos/totalmailboxdeath/assets/158247609/8583b088-f7e4-40db-96ea-04e1e839de66)
+
 # requirements 
 
 * selenium, ttk
