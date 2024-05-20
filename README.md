@@ -27,7 +27,7 @@ this is a conceptual personal project; not intended for malicious use.
 
 # donations
 
-https://ko-fi.com/logbagos
-LTC: MNP1jF3ySUzTX24AtoSuJJWxMiroMYWhWa
-XMR/Monero: 432cg1Mhzg4esHifrrifvsgQYWHHwsceDEoK79gvVmMENuhge72b53q8m5ZNHE3f8U5ogpJPA2gYfM7EV85ikzC6SvciivS
+* https://ko-fi.com/logbagos
+* LTC: MNP1jF3ySUzTX24AtoSuJJWxMiroMYWhWa
+* XMR/Monero: 432cg1Mhzg4esHifrrifvsgQYWHHwsceDEoK79gvVmMENuhge72b53q8m5ZNHE3f8U5ogpJPA2gYfM7EV85ikzC6SvciivS
 
