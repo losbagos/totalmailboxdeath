@@ -1,5 +1,7 @@
 ## total mailbox death - ,  .  :3
 
+## not automatic yet :<
+
 #           >>>>> >>>>><<<<< <<<<<
 
 from selenium import webdriver
@@ -52,17 +54,6 @@ def tmdGoob():
     shnooFirstname= tmdName_entry.get()
     shnooLastname= tmdLastName_entry.get()
     tmdWeb()
-
-def tmdShank():
-    global shnooEmail
-    global shnooFirstname
-    global shnooLastname
-    global shnooPhone
-    shnooEmail= tmdEmail_entry.get() 
-    shnooFirstname= tmdName_entry.get()
-    shnooLastname= tmdLastName_entry.get()
-    tmdForm()
-# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
 
 ## ˋ°•*⁀➷ shnooie for all email element variants
@@ -117,7 +108,7 @@ def tmdSnorrey_firstName():
 lastNamelist = ["lastname", "LNAME"]
 
 def tmdSnorrey_lastName():
-    for i in surNamelist:
+    for i in lastNamelist:
         tmdShnooie_lastName(i)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ turning list.txt into a list ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
