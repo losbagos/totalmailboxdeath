@@ -1,5 +1,7 @@
 ## total mailbox death - ,  .  :3
 
+## not automatic yet :<
+
 #           >>>>> >>>>><<<<< <<<<<
 
 from selenium import webdriver
@@ -47,8 +49,12 @@ tmdApp.iconbitmap("kitty.ico")
 def tmdGoob():
     global shnooEmail
     global shnooFirstname
+    global shnooLastname
+    global shnooPhone
     shnooEmail= tmdEmail_entry.get() 
     shnooFirstname= tmdName_entry.get()
+    shnooLastname= tmdLastName_entry.get()
+    shnooPhone= tmdPhone_entry.get()
     tmdWeb()
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
@@ -73,6 +79,28 @@ def tmdShnooie_firstName(sn_firstName):
     finally:
         time.sleep(1)
 
+def tmdShnooie_lastName(sn_lastname):
+    try: 
+        driver.implicitly_wait(1)
+        sn_Email_element = driver.find_element(By.NAME, sn_lastname)
+        sn_Email_element.send_keys(shnooLastname)
+    except:
+            pass
+    finally:
+        time.sleep(1)
+
+def tmdShnooie_phoneNumber(sn_number):
+    try: 
+        driver.implicitly_wait(1)
+        sn_Email_element = driver.find_element(By.NAME, sn_number)
+        sn_Email_element.send_keys(shnooPhone)
+    except:
+            pass
+    finally:
+        time.sleep(1)
+
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
+
 emaillist = ["email", "EMAIL", "contact[email]"]
 
 def tmdSnorrey_email():
@@ -90,11 +118,19 @@ def tmdSnorrey_firstName():
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-surNamelist = ["lname", "lastname", "last_name"]
+lastNamelist = ["lastname", "LNAME"]
 
-def tmdSnorrey_surName():
+def tmdSnorrey_lastName():
     for i in surNamelist:
-        tmdShnooie_surName(i)
+        tmdShnooie_lastName(i)
+
+# -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
+
+phoneNumberlist = ["contact[Phone number]", "number"] #
+
+def tmdSnorrey_phoneNumber():
+    for i in surNamelist:
+        tmdShnooie_phoneNumber(i)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ turning list.txt into a list ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
@@ -108,6 +144,8 @@ def tmdWebsite(website):
     print(" ⚘᠂ ⚘ The current url is: " + website)
     tmdSnorrey_email()
     tmdSnorrey_firstName()
+    tmdSnorrey_lastName
+    tmdSnorrey_phoneNumber
     time.sleep(1)
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
@@ -126,10 +164,14 @@ def tmdWeb():
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -App- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- 
 
 tmdEmail_label = tkinter.Label(tmdApp, text="Email Address", background=LightPink)
-tmdName_label = tkinter.Label(tmdApp, text="Name", background=LightPink )
+tmdName_label = tkinter.Label(tmdApp, text="First Name", background=LightPink )
+tmdLastName_label = tkinter.Label(tmdApp, text="Last Name", background=LightPink)
+tmdNumber_label = tkinter.Label(tmdApp, text="Phone Number", background=LightPink)
 
 tmdEmail_entry = tkinter.Entry(tmdApp)
 tmdName_entry = tkinter.Entry(tmdApp)
+tmdLastName_entry = tkinter.Entry(tmdApp)
+tmdNumber_entry = tkinter.Entry(tmdApp)
 
 tmdSubmit_label = tkinter.Label(tmdApp, text="Total Mailbox Death!", background=LightPink)
 tmdSubmit_button = tkinter.Button (tmdApp, text="Run", background=Pink, command = tmdGoob)
@@ -157,18 +199,24 @@ tmdSubmit_label.grid(row=0, column=0, columnspan=2)
 tmdName_label.grid(row=1, column=0)
 tmdName_entry.grid(row=1, column=1)
 
-tmdEmail_label.grid(row=2, column=0)
-tmdEmail_entry.grid(row=2, column=1)
+tmdLastName_label.grid(row=2, column=0)
+tmdLastName_entry.grid(row=2, column=1)
 
-tmdSubmit_button.grid(row=3, column=0, columnspan=2, pady=3)
+tmdNumber_label.grid(row=3, column=0)
+tmdNumber_entry.grid(row=3, column=1)
 
-tmdExit_button.grid(row=4, column=0, columnspan=2, pady=2)
+tmdEmail_label.grid(row=4, column=0)
+tmdEmail_entry.grid(row=4, column=1)
+
+tmdSubmit_button.grid(row=5, column=0, columnspan=2, pady=3)
+
+tmdExit_button.grid(row=6, column=0, columnspan=2, pady=2)
 
 #--
 progress_label = tkinter.Label(tmdApp, text="Progress Bar!", background=LightPink)
-progress_label.grid(row=7, column=0)
+progress_label.grid(row=8, column=0)
 progress = ttk.Progressbar(tmdApp, length=100)
-progress.grid(row=7, column=1, columnspan=4, pady=3)
+progress.grid(row=8, column=1, columnspan=4, pady=3)
 
 
 
