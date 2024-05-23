@@ -33,3 +33,7 @@ this is a conceptual personal project; not intended for malicious use.
 * LTC: MNP1jF3ySUzTX24AtoSuJJWxMiroMYWhWa
 * XMR: 432cg1Mhzg4esHifrrifvsgQYWHHwsceDEoK79gvVmMENuhge72b53q8m5ZNHE3f8U5ogpJPA2gYfM7EV85ikzC6SvciivS
 
+# thanks
+
+thank you donmega for ur contributions :D
+
