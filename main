@@ -97,7 +97,7 @@ def tmdSnorrey_email():
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-firstNamelist = ["name", "NAME", "first_name", "FNAME"]
+firstNamelist = ["name", "NAME", "first_name", "FNAME", "firstname"]
 
 def tmdSnorrey_firstName():
     for i in firstNamelist:
@@ -105,7 +105,7 @@ def tmdSnorrey_firstName():
 
 # -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ -- ᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃ --  
 
-lastNamelist = ["lastname", "LNAME"]
+lastNamelist = ["lastname", "LNAME", "last_name"]
 
 def tmdSnorrey_lastName():
     for i in lastNamelist:
