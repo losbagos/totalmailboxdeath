@@ -152,7 +152,6 @@ tmdName_entry = tkinter.Entry(tmdApp)
 tmdLastName_entry = tkinter.Entry(tmdApp)
 
 tmdSubmit_label = tkinter.Label(tmdApp, text="Total Mailbox Death!", background=LightPink)
-tmdCaution_label = tkinter.Label(tmdApp, text="please only pick one!", background=LightPink)
 tmdSubmit_button = tkinter.Button (tmdApp, text="run newsletter spammer", background=Pink, command = tmdGoob)
 
 # TO DO, FIGURE OUT !!!!
