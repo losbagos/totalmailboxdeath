@@ -67,7 +67,6 @@ def tmdShnooie_email(sn_Email):
         sn_Email_element = driver.find_element(By.NAME, sn_Email) # goes through list and finds the name element that matches
         sn_Email_element.send_keys(shnooEmail)
     except:
-            print("error!! couldn't find the 'name' element for 'email'") # please send me this error if you see it, that means a website is there when it shouldn't be
             pass # will pass any lieek umm ones it can't find
 
 ## ˋ°•*⁀➷ shnooie for all first name element variants
@@ -77,7 +76,6 @@ def tmdShnooie_firstName(sn_firstName):
         sn_Email_element = driver.find_element(By.NAME, sn_firstName)
         sn_Email_element.send_keys(shnooFirstname)
     except:
-            print("error!! couldn't find the 'name' element for 'first name'")
             pass
     finally:
         time.sleep(1)
@@ -88,7 +86,6 @@ def tmdShnooie_lastName(sn_lastname):
         sn_Email_element = driver.find_element(By.NAME, sn_lastname)
         sn_Email_element.send_keys(shnooLastname)
     except:
-            print("error!! couldn't find the 'name' element for 'last name'")
             pass
     finally:
         time.sleep(1)
