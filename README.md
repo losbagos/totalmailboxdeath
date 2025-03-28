@@ -21,7 +21,7 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 1. download .zip
 2. open .zip
 3. open vscode or other editor and open file ![image](https://github.com/user-attachments/assets/6df3c11a-70a7-4a52-9365-f1aceda956d0)
-5. run pip install -r requirements.txt in terminal ![image](https://github.com/user-attachments/assets/841b8116-1f88-477a-b2d1-eb24b42f0470) if pip doesn't run, check this out for further information: https://stackoverflow.com/questions/62088784/how-to-install-pip-on-windows 
+5. run pip install -r requirements.txt in terminal. if pip doesn't run, check this out for further information: https://stackoverflow.com/questions/62088784/how-to-install-pip-on-windows 
 7. run script
 
 # on adding new websites
