@@ -7,7 +7,7 @@ a very simple selenium / webdriver based concept that utilizes newsletters for s
 ![image](https://github.com/losbagos/totalmailboxdeath/assets/158247609/8583b088-f7e4-40db-96ea-04e1e839de66)
 
 > current time to finish - 3.55 Hours
-> amount of current websites - 406
+> amount of current websites - 417
 
 # requirements
 
