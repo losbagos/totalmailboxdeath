@@ -47,7 +47,6 @@ tmdApp = tk.Tk()
 tmdApp.title('total mailbox death')
 tmdApp.geometry('280x200')
 tmdApp.configure(background=LightPink, highlightbackground=Pink)
-tmdApp.iconbitmap("kitty.ico")
 
 def tmdGoob():
     global shnooEmail
