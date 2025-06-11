@@ -1,4 +1,4 @@
-
+follow me on bsky: https://bsky.app/profile/losbagos.bsky.social
 
 # total mailbox death
 
